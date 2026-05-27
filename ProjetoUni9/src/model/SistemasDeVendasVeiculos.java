@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SistemasDeVendasVe {
+public class SistemasDeVendasVeiculos {
 
     // ======================================
     // LISTA DE VEÍCULOS
