@@ -1,4 +1,6 @@
-public class PessoaFisica {
+package model;
+
+public class PessoaFisica extends Cliente {
 
     private String cpf;
     private int idade;
@@ -25,9 +27,7 @@ public class PessoaFisica {
         this.idade = idade;
     }
 
-    @Override
     public void exibirDados() {
-        super.exibirDados();
         System.out.println("CPF: " + cpf);
         System.out.println("Idade: " + idade);
     }
