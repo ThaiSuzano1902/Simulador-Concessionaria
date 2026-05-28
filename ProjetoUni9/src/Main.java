@@ -3,7 +3,10 @@ import model.*;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+//Oi Professor! Segue os RA abaixo
+// 424105056 - Thaisa Cuiza Suzano (lider)
+//424104278 - Gabriel Chojlu Luna
+// 923105455 - Edilson Condori Laura
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
