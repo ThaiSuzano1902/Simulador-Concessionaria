@@ -4,20 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SistemasDeVendasVe {
-
-    // ======================================
-    // LISTA DE VEÍCULOS
-    // ======================================
+    // LISTA  
 
     private List<Veiculo> listaVeiculos = new ArrayList<>();
 
-
-    // ======================================
-    // CADASTRAR VEÍCULO
-    // ======================================
+    // CADASTRA
     public void cadastrarVeiculo(Veiculo veiculo) {
-
-        // REGRA DA ATIVIDADE
         if (veiculo.getAnoFabricacao() > 2027) {
 
             throw new IllegalArgumentException(
@@ -31,12 +23,8 @@ public class SistemasDeVendasVe {
     }
 
 
-    // ======================================
-    // LISTAR VEÍCULOS
-    // ======================================
+    // LISTAR 
     public void listarVeiculos() {
-
-        // VERIFICA SE A LISTA ESTÁ VAZIA
         if (listaVeiculos.isEmpty()) {
 
             System.out.println("Nenhum veículo cadastrado.");
@@ -44,7 +32,6 @@ public class SistemasDeVendasVe {
             return;
         }
 
-        // PERCORRE A LISTA
         for (Veiculo veiculo : listaVeiculos) {
 
             System.out.println("-------------------------");
@@ -71,11 +58,6 @@ public class SistemasDeVendasVe {
                     + veiculo.getStatus());
 
 
-            // ======================================
-            // POLIMORFISMO
-            // ======================================
-
-            // CARRO
             if (veiculo instanceof Carro) {
 
                 Carro carro = (Carro) veiculo;
@@ -108,9 +90,7 @@ public class SistemasDeVendasVe {
     }
 
 
-    // ======================================
-    // EDITAR PREÇO DO VEÍCULO
-    // ======================================
+    // EDITA PREÇO DO VEÍCULO
     public void editarPrecoVeiculo(Long id,
                                    int novoPreco) {
 
@@ -126,22 +106,15 @@ public class SistemasDeVendasVe {
                 return;
             }
         }
-
-        // NÃO ENCONTROU
         throw new IllegalArgumentException(
                 "Veículo não encontrado!"
         );
     }
 
-
-    // ======================================
-    // DELETAR VEÍCULO
-    // ======================================
+    // DELETE
     public void deletarVeiculo(Long id) {
 
         Veiculo veiculoEncontrado = null;
-
-        // PROCURA O VEÍCULO
         for (Veiculo veiculo : listaVeiculos) {
 
             if (veiculo.getId().equals(id)) {
@@ -151,8 +124,6 @@ public class SistemasDeVendasVe {
                 break;
             }
         }
-
-        // NÃO ENCONTROU
         if (veiculoEncontrado == null) {
 
             throw new IllegalArgumentException(
@@ -160,16 +131,11 @@ public class SistemasDeVendasVe {
             );
         }
 
-        // REMOVE DA LISTA
         listaVeiculos.remove(veiculoEncontrado);
 
         System.out.println("Veículo removido!");
     }
-
-
-    // ======================================
-    // BUSCAR VEÍCULO PELO ID
-    // ======================================
+    
     public Veiculo buscarVeiculo(Long id) {
 
         for (Veiculo veiculo : listaVeiculos) {

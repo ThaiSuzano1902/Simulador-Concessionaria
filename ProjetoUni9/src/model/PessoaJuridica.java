@@ -15,8 +15,8 @@ public class PessoaJuridica extends Cliente {
     }
 
     public void setCnpj(String cnpj) {
-        if (this.cnpj == null || cnpj.length() != 14) {
-            throw new IllegalArgumentException("Número de CNPJ Inválido! Deve conter exatamente 11 dígitos.");
+        if (cnpj == null || cnpj.length() != 14) {
+            throw new IllegalArgumentException("Número de CNPJ Inválido! Deve conter exatamente 14 dígitos.");
         }
         this.cnpj = cnpj;
     }  
@@ -26,7 +26,7 @@ public class PessoaJuridica extends Cliente {
     }
 
     public void setNomeEmpresa(String nomeEmpresa) {
-        if(this.nomeEmpresa == null){
+        if(nomeEmpresa == null){
             throw new IllegalStateException("Erro!!! Não aceitamos campos vazios. ");
         }
         this.nomeEmpresa = nomeEmpresa;

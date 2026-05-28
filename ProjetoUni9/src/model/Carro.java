@@ -1,7 +1,6 @@
 package model;
 
 import java.util.Objects;
-
 import Enums.StatusVeiculo;
 import Enums.TipoVeiculo;
 
